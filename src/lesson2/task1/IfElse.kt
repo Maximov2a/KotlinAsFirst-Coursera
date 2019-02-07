@@ -106,8 +106,12 @@ fun timeForHalfWay(t1: Double, v1: Double,
  */
 fun whichRookThreatens(kingX: Int, kingY: Int,
                        rookX1: Int, rookY1: Int,
-                       rookX2: Int, rookY2: Int): Int = TODO()
-
+                       rookX2: Int, rookY2: Int): Int  {
+    if ((kingX==rookX1 || kingY==rookY1)&&(kingX==rookX2 || kingY==rookY2)) return 3
+    else if (kingX==rookX1 || kingY==rookY1) return 1
+    else if (kingX==rookX2 || kingY==rookY2) return 2
+    else  return 0
+}
 /**
  * Простая
  *
@@ -120,7 +124,41 @@ fun whichRookThreatens(kingX: Int, kingY: Int,
  */
 fun rookOrBishopThreatens(kingX: Int, kingY: Int,
                           rookX: Int, rookY: Int,
-                          bishopX: Int, bishopY: Int): Int = TODO()
+                          bishopX: Int, bishopY: Int): Int =TODO()/* {
+    val slon = false
+
+    while (bishopX<8||bishopY<8){
+        if((bishopX== kingX)&&(bishopY== kingY)){val slon = true }
+        val bishopX=bishopX+1
+        val bishopY=bishopY+1
+        println("x $bishopX   y $bishopY ")
+    }
+    while (bishopX>1||bishopY>1){
+        if((bishopX== kingX)&&(bishopY== kingY)){val slon = true }
+        val bishopX=bishopX-1
+        val bishopY=bishopY-1
+        println("2")
+        println("x $bishopX   y $bishopY ")
+    }
+    while (bishopX<8||bishopY>1){
+        if((bishopX== kingX)&&(bishopY== kingY)){val slon = true }
+        val bishopX=bishopX+1
+        val bishopY=bishopY-1
+        println("3")
+        println("x $bishopX   y $bishopY ")
+    }
+    while (bishopX>1||bishopY<8){
+        if((bishopX== kingX)&&(bishopY== kingY)){val slon = true }
+        val bishopX=bishopX-1
+        val bishopY=bishopY+1
+        println("4")
+        println("x $bishopX   y $bishopY ")
+    }
+    if ((kingX==rookX || kingY==rookY)&&(slon)) return 3
+    else if (kingX==rookX || kingY==rookY) return 1
+    else if (slon) return 2
+    else  return 0
+}*/
 
 /**
  * Простая

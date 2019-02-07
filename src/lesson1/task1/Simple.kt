@@ -41,6 +41,7 @@ fun quadraticRootProduct(a: Double, b: Double, c: Double): Double {
     val sd = sqrt(discriminant(a, b, c))
     val x1 = (-b + sd) / (2 * a)
     val x2 = (-b - sd) / (2 * a)
+    println("x1  $x1    x2  $x2")
     return x1 * x2 // Результат
 }
 
@@ -56,6 +57,7 @@ fun main(args: Array<String>) {
 
    val angleInRadianRez=  angleInRadian(36, 14, 35)
     println("angleInRadian $angleInRadianRez")
+    quadraticRootProduct(2.44, 626.34, -2532.1)
 /*val  aaa = numberRevert(487)
     val  aaa1 = numberRevert(102)
     println("487 $aaa)" )
